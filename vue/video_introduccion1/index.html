@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{Titulo}}</h1>
+
+        
+
+        <ul><!--propiedades de Vue, lu ciclo for con VUE(v-for) {{tienda}} llama a todo el objeto -->
+            <li v-for="tienda of Categoria"> 
+                
+                {{tienda.cantidad}} - {{tienda.Nombre}}
+
+                <!--Condicional dentro de un span (cuando el item es cero debe aparecer sin stock)-->
+
+                <span v-if="tienda.cantidad === 0">- Sin Stock</span>
+
+            </li>
+
+            </li><!-- tienda va hacer iterativo dentro de Categoria, toma los valores del array    -->
+       
+        </ul>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!--liberia vue cdn-->
+    <script src="pagina1.js"></script><!--Llamando archivo js-->
+    
+</body>
+</html>
